@@ -1,0 +1,27 @@
+[project]
+name = "chassis"
+version = "0.1.0"
+requires-python = ">=3.12"
+
+[dependency-groups]
+dev = ["ruff", "pre-commit"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = [
+    "E",   # pycodestyle errors
+    "W",   # pycodestyle warnings
+    "F",   # pyflakes
+    "I",   # isort
+    "B",   # bugbear
+    "UP",  # pyupgrade
+    "SIM", # simplify
+    "C4",  # comprehensions
+    "RUF", # ruff-specific
+]
+
+[tool.ruff.format]
+quote-style = "double"
